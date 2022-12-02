@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>FOOD WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+}
+
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0;
+    left: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+section nav .logo img{
+    width: 100px;
+    cursor: pointer;
+    margin: 7px 0;
+}
+
+section nav ul{
+    list-style: none;
+}
+
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+section nav ul li a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 17px;
+    transition: 0.1s;
+}
+
+section nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    transition: 0.2s linear;
+}
+
+section nav ul li a:hover::after{
+    width: 100%;
+}
+
+section nav ul li a:hover{
+    color: #fac031;
+}
+
+section nav .icon i{
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section nav .icon i:hover{
+    color: #fac031;
+}
+
+section .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    top: 130px;
+}
+
+section .main .men_text h1{
+    font-size: 60px;
+    position: relative;
+    top: -90px;
+    left: 20px;
+}
+
+section .main .men_text h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+    line-height: 22px;
+    font-size: 70px;
+}
+
+section .main .main_image img{
+    width: 700px;
+    position: relative;
+    left: 70px;
+}
+
+section p{
+    width: 650px;
+    text-align: justify;
+    position: relative;
+    left: 123px;
+    bottom: 120px;
+    line-height: 22px;
+}
+
+section .main_btn{
+    background:orange;
+    position: relative;
+    left: 123px;
+    bottom: 30px;
+    width: 150px;
+    cursor: pointer;
+    padding: 12px 25px;
+}
+
+section .main_btn a{
+    color: #fff;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+section .main_btn i{
+    color: #fff;
+    transition: 0.3s;
+}
+
+section .main_btn:hover i{
+    transform: translateX(7px);
+}
+
+
+
+/About/
+
+.about{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.about .about_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about .about_main .image img{
+    width: 800px;
+    position: relative;
+    top: 60px;
+}
+
+.about .about_main .about_text h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.about .about_main .about_text h1{
+    font-size: 55px;
+    position: relative;
+    bottom: 50px;
+}
+
+.about .about_main .about_text h3{
+    font-size: 30px;
+    margin: 0 0 50px 0;
+}
+
+.about .about_main .about_text p{
+    width: 650px;
+    text-align: justify;
+    margin-right: 30px;
+    line-height: 22px;
+}
+
+.about .about_btn{
+    background: #fac031;
+    padding: 12px 25px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    left: 55%;
+    bottom: 30px;
+}
+
+
+
+/Menu/
+
+.menu{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.menu h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.menu h1 span{
+    color: #fac031;
+    margin-left: 15px;
+    font-family: mv boli;
+}
+
+.menu h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.menu .menu_box{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.menu .menu_box .menu_card{
+    width: 325px;
+    height: 480px;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.menu .menu_box .menu_card .menu_image{
+    width: 300px;
+    height: 245px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.menu .menu_box .menu_card .menu_image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card .menu_image:hover img{
+    transform: scale(1.1);
+}
+
+.menu .menu_box .menu_card .small_card{
+    width: 45px;
+    height: 45px;
+    float: right;
+    position: relative;
+    top: -240px;
+    right: -8px;
+    opacity: 0;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.menu .menu_box .menu_card:hover .small_card{
+    position: relative;
+    top: -240px;
+    right: 20px;
+    opacity: 1;
+}
+
+.menu .menu_box .menu_card .small_card i{
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 50px;
+    color: #000;
+    cursor: pointer;
+    text-shadow: 0 0 6px #000;
+    transition: 0.2s;
+}
+
+.menu .menu_box .menu_card .small_card i:hover{
+    color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info h2{
+    width: 60%;
+    text-align: center;
+    margin: 10px auto 10px auto;
+    font-size: 25px;
+    color: #fac031;
+}
+
+.menu .menu_box .menu_card .menu_info p{
+    text-align: center;
+    margin-top: 8px;
+    line-height: 21px;
+}
+
+.menu .menu_box .menu_card .menu_info h3{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_icon{
+    color: #fac031;
+    text-align: center;
+    margin: 10px 0 10px 0;
+}
+
+.menu .menu_box .menu_card .menu_info .menu_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    background: #000;
+    padding: 8px 10px;
+    margin: 0 80px;
+    transition: 0.3s;
+}
+
+
+
+/food items/
+
+.Fooditems{
+    width: 100%;
+    padding: 70px 0;
+}
+
+.Fooditems h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Fooditems h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.Fooditems h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.Fooditems .Fooditems_image_box{
+    width: 95%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image img{
+    width: 100%;
+    transition: .3s;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image:hover img{
+    opacity: 0.4;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image h3{
+    position: absolute;
+    font-size: 35px;
+    margin-bottom: 130px;
+    color: #fac031;
+    font-family: polo;
+    z-index: 5;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image:hover h3{
+    opacity: 1;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image p{
+    position: absolute;
+    width: 100px;
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+    line-height: 22px;
+    opacity: 1;
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image:hover p{
+    opacity: 1;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image .Fooditems_btn{
+    position: absolute;
+    margin-top: 180px;
+    color: #000;
+    background: #fac031;
+    padding: 7px 25px;
+    text-decoration: none;
+    opacity: 1;
+    transform: translateY(45px);
+    z-index: 5;
+    transition: 0.3s;
+}
+
+.Fooditems .Fooditems_image_box .Fooditems_image:hover .Fooditems_btn{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/Review/
+
+.Review{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+
+.Review h1{
+    font-size: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Review h1 span{
+    margin-left: 15px;
+    color: #fac031;
+    font-family: mv boli;
+}
+
+.Review h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+
+.Review .Review_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+
+.Review .Review_box .Review_card{
+    width: 350px;
+    height: 535px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+}
+
+.Review .Review_box .Review_card .Review_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.Review .Review_box .Review_card:hover .Review_profile{
+    transform: translateY(-60px);
+}
+
+.Review .Review_box .Review_card .Review_profile img{
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid #cccccc;
+}
+
+.Review .Review_box .Review_card .Review_text{
+    text-align: center;
+}
+
+.Review .Review_box .Review_card .Review_text .name{
+    color: #000;
+    transition: 0.3s;
+}
+
+.Review .Review_box .Review_card:hover .Review_text .name{
+    transform: translateY(-50px);
+}
+
+.Review .Review_box .Review_card .Review_text .Review_icon{
+    color: #fac031;
+    transition: 0.3s;
+}
+
+.review .review_box .review_card:hover .review_text .review_icon{
+    transform: translateY(-30px);
+}
+
+.Review .Review_box .Review_card .Review_text .Review_social i{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Review .Review_box .Review_card:hover .Review_text .Review_social i{
+    opacity: 1;
+    transform: translateY(-8px);
+}
+
+.Review .Review_box .Review_card .Review_text p{
+    text-align: center;
+    line-height: 22px;
+    transition: 0.3s;
+}
+
+.Review .Review_box .Review_card:hover .Review_text p{
+    margin-top: 5px;
+}
+
+
+
+/Order/
+
+.Order{
+    width: 100%;
+    height: 100vh;
+    padding: 70px 0;
+    background-image: url(D:\New folder\bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.Order h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 55px;
+}
+
+.Order h1 span{
+    color: #fac031;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+
+.Order h1 span::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #fac031;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+
+.Order .Order_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Order .Order_main .Order_image img{
+    width: 600px;
+}
+
+.Order .Order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 10px;
+}
+
+.Order .Order_main form .input p{
+    line-height: 25px;
+}
+
+.Order .Order_main form .input{
+    margin: 5px;
+}
+
+.Order .Order_main form .input input{
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid #cccccc;
+    background: #eeeeee;
+    outline: none;
+    border-radius: 3px;
+}
+
+.Order .Order_main form .input input:focus{
+    border: 2px solid #fac031;
+}
+
+.Order .Order_main form .Order_btn{
+    padding: 10px 0;
+    background: #fac031;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+
+
+
+
+/Footer/
+
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: #eeeeee;
+}
+
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+footer .footer_main .footer_tag{
+    text-align: center;
+}
+
+footer .footer_main .footer_tag h2{
+    color: #000;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+footer .footer_main .footer_tag p{
+    margin: 10px 0;
+}
+
+footer .footer_main .footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+footer .footer_main .footer_tag i:hover{
+    color: #fac031;
+}
+
+footer .end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+footer .end span{
+    color: #fac031;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar{
+    width: 13px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background: #fac031;
+    border-radius: 15px;
+}
+</script>
+</head>    
+</html>
+<body>  
+<section>
+     <nav> 
+        <div class="logo">
+            <img src="D:\New folder\logo.png">
+        </div>
+        <ul>
+            <li><a href="#Home">HOME</a></li>
+            <li><a href="#About">ABOUT</a></li>
+            <li><a href="#Menu">MENU</a></li>
+            <li><a href="#Fooditems">FOOD ITEMS</a></li>
+            <li><a href="#Review">REVIEW</a></li>
+            <li><a href="#Order">ORDER</a></li>
+        </ul>
+        <div class="icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        </nav>
+        <div class="main">
+        <div class="men_text">
+            <h1>GET FRESH<span>FOOD</span><br>IN A EASY WAY</h1>
+        </div>
+        <div class="main_image">
+            <img src="D:\New folder\main_img.png">
+        </div>
+        </div>
+        <p>
+         jrfhiurghfuehfiehejle
+        </p>
+        <div class="main_btn">
+            <a href="#">ORDER NOW</a>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        </section>
+
+
+<!--about-->
+<div class="about" id="about">
+    <div class="about_main">
+        <div class="image">
+            <img src="D:\New folder\Food-Plate.png">
+        </div>
+        <div class="about_text">
+            <h1><span>ABOUT</span>US</h1>
+            <h3>WHY CHOOSE US??</h3>
+            <p>bhsgcjsdjfkfmd</p>
+        </div>
+    </div>
+    
+</div>
+<!--menu-->
+<div class="menu" id="Menu">
+    <h1>OUR<span>MENU</span></h1>\
+    <div class="menu_box">
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\buger.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>BURGER</h2>
+                <p>burger is tasty</p>
+                <h3>Rs.100</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\pasta.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>PASTA</h2>
+                <p>PASTA is tasty</p>
+                <h3>Rs.250</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\lasagna.webp">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>BAKED PENNE PASTA</h2>
+                <p>cheese  is tasty</p>
+                <h3>Rs.270</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\chocolate_Drink.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>COLD COFFEE</h2>
+                <p>COFFEE is tasty</p>
+                <h3>Rs.120</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\pizza.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>PIZZA</h2>
+                <p>pizza is tasty</p>
+                <h3>Rs.500</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\Hot_dog.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>HOT DOG</h2>
+                <p>HOT DOG is tasty</p>
+                <h3>Rs.200</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\juse.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>MOJITO</h2>
+                <p>MOJITO is tasty</p>
+                <h3>Rs.150</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\biryani.webp">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>BIRYANI</h2>
+                <p>BIR is tasty</p>
+                <h3>Rs.450</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\chocolate.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>CHOCOLATE</h2>
+                <p>burger is tasty</p>
+                <h3>STARTING FROM Rs.100</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\ice_cream.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>ICE CREAM</h2>
+                <p>burger is tasty</p>
+                <h3>STARTING FROM Rs.150</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\Spanchi.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>CUPCAKE</h2>
+                <p>burger is tasty</p>
+                <h3>STARTING FROM Rs.80</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+        <div class="menu_card">
+            <div class="menu_image">
+                <img src="D:\New folder\sandwich.jpg">
+            </div>
+            <div class="small_card">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="menu_info">
+                <h2>GRILLED SANDWICH</h2>
+                <p>burger is tasty</p>
+                <h3>Rs.200</h3>
+                <div class="menu_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <a href="#" class="menu_btn">Order now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--FOOD ITEMS-->
+
+<div class="Fooditems" id="Fooditems">
+    <h1>OUR<span>FOOD ITEMS</span></h1>
+    <div class="Fooditems_image_box">
+        <div class="Fooditems.image">
+            <img src="D:\New folder\gallary_1.jpg">
+            <h3>FOOD</h3>
+            <p>jhjhojo</p>
+            <a href="#" class="Fooditems_btn">ORDER NOW</a>
+        </div>
+        <div class="Fooditems.image">
+            <img src="D:\New folder\gallary_2.jpg">
+            <h3>FOOD</h3>
+            <p>jhjhojo</p>
+            <a href="#" class="Fooditems_btn">ORDER NOW</a>
+        </div>
+        <div class="Fooditems.image">
+            <img src="D:\New folder\gallary_3.jpg">
+            <h3>FOOD</h3>
+            <p>jhjhojo</p>
+            <a href="#" class="Fooditems_btn">ORDER NOW</a>
+        </div>
+        <div class="Fooditems.image">
+            <img src="D:\New folder\gallary_4.jpg">
+            <h3>FOOD</h3>
+            <p>jhjhojo</p>
+            <a href="#" class="Fooditems_btn">ORDER NOW</a>
+        </div>
+        <div class="Fooditems.image">
+            <img src="D:\New folder\gallary_5.jpg">
+            <h3>FOOD</h3>
+            <p>jhjhojo</p>
+            <a href="#" class="Fooditems_btn">ORDER NOW</a>
+        </div>
+        <div class="Fooditems.image">
+            <img src="D:\New folder\gallary_6.jpg">
+            <h3>FOOD</h3>
+            <p>jhjhojo</p>
+            <a href="#" class="Fooditems_btn">ORDER NOW</a>
+        </div>
+        
+        
+    </div>
+
+</div>
+
+<!--review-->
+<div class="Review" id="Review">
+    <h1>CUSTOMER<span>REVIEW</span></h1>
+    <div class="Review_box">
+        <div class="Review_card">
+            <div class="Review_profile">
+                <img src="D:\New folder\images (1).jpg">
+            </div>
+            <div class="Review_text">
+                <h2 class="name">RAVI PRASAD</h2>
+                <div class="Review_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+
+                </div>
+                <div class="Review_social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <p>chhjjlkl</p>
+            </div>
+        </div>
+        <div class="Review_card">
+            <div class="Review_profile">
+                <img src="D:\New folder\20210915164753.webp">
+            </div>
+            <div class="Review_text">
+                <h2 class="name">SUKHPAL SINGH</h2>
+                <div class="Review_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+
+                </div>
+                <div class="Review_social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <p>chhjjlkl</p>
+            </div>
+        </div>
+        <div class="Review_card">
+            <div class="Review_profile">
+                <img src="D:\New folder\images (2).jpg">
+            </div>
+            <div class="Review_text">
+                <h2 class="name">SHRUTI KAPOOR</h2>
+                <div class="Review_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+
+                </div>
+                <div class="Review_social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <p>chhjjlkl</p>
+            </div>
+        </div>
+        <div class="Review_card">
+            <div class="Review_profile">
+                <img src="D:\New folder\images.jpg">
+            </div>
+            <div class="Review_text">
+                <h2 class="name">HARISH GOYAL</h2>
+                <div class="Review_icon">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+
+                </div>
+                <div class="Review_social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </div>
+                <p>chhjjlkl</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!--ORDER-->
+<div class="Order" id="Order">
+    <h1><span>ORDER</span>NOW</h1>
+    <div class="Order_main">
+        <div class="Order_image">
+            <img src="D:\New folder\order_image.png">
+        </div>
+        <form action="#">
+            <div class="input">
+                <p>NAME</p>
+                <input type="text" placeholder="your name">
+            </div>
+            <div class="input">
+                <p>EMAIL</p>
+                <input type="email" placeholder="your email">
+            </div>
+            <div class="input">
+                <p>NUMBER</p>
+                <input placeholder="your number">
+            </div>
+            <div class="input">
+                <p>HOW MANY</p>
+                <input type="number" placeholder="how many order">
+            </div>
+            <div class="input">
+                <p>YOUR ORDER</p>
+                <input placeholder="food item">
+            </div>
+            <div class="input">
+                <p>ADDRESS</p>
+                <input placeholder="your address">
+            </div>
+       
+        <a href="#" class="Order_btn">ORDER NOW</a>
+        </form>
+    </div>
+</div>
+
+
+<!--footer-->
+<footer>
+    <div class="footer_main">
+        <div class="footer_tag">
+            <h2>LOCATION</h2>
+            <p>SRI LANKA</p>
+            <p>USA</p>
+            <p>INDIA</p>
+            <p>JAPAN </p>
+            <p>AUSTRALIA</p>
+        </div>
+        <div class="footer_tag">
+            <h2>QUICK LINK</h2>
+            <p>HOME</p>
+            <p>ABOUT</p>
+            <p>MENU</p>
+            <p>FOOD ITEMS </p>
+            <p>ORDER</p>
+        </div>
+        <div class="footer_tag">
+            <h2>CONTACT</h2>
+            <p>+91 8692669297</p>
+            <p>+91 9748272650</p>
+            <p>praganyamittal@gmail.com</p>
+            <p>snehasanjan400@gmail.com </p>
+            
+        </div>
+        <div class="footer_tag">
+            <h2>OUR SERVICE</h2>
+            <p>FAST SERVICE</p>
+            <p>EASY PAYMENT</p>
+            <p>24x7</p>
+            
+        </div>
+        <div class="footer_tag">
+            <h2>FOLLOW US</h2>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            
+        </div>
+    </div>
+</footer>
+</body>
+</html>
